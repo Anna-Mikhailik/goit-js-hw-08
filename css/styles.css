@@ -23,7 +23,6 @@ body {
   
   .gallery-item {
     overflow: hidden;
-    border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   }
   
@@ -33,10 +32,13 @@ body {
   }
   
   .gallery-image {
+    width: 360px;
+height: 200px;
     width: 100%;
     height: auto;
     display: block;
     transition: transform 0.3s ease;
+    background: url("path_to_image");
   }
   
   .gallery-image:hover {
