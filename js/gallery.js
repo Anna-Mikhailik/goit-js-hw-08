@@ -66,7 +66,7 @@ const images = [
 
 const gallery = document.querySelector(".gallery");
 
-// Створення розмітки галереї
+
 const createGalleryMarkup = images
   .map(
     ({ preview, original, description }) => `
@@ -86,7 +86,7 @@ const createGalleryMarkup = images
 
 gallery.innerHTML = createGalleryMarkup;
 
-// Обробка події кліку на елемент галереї
+
 gallery.addEventListener("click", (event) => {
   event.preventDefault();
 
@@ -95,14 +95,14 @@ gallery.addEventListener("click", (event) => {
 
   const largeImageURL = target.dataset.source;
 
-  // Створення модального вікна з бібліотекою basicLightbox
+  
   const instance = basicLightbox.create(`
     <img src="${largeImageURL}" alt="${target.alt}" />
   `);
 
   instance.show();
 
-  // Закриття модального вікна при натисканні клавіші Esc
+  
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") {
       instance.close();
